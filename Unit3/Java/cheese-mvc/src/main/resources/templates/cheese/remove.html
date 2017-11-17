@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments::head"></head>
+<body>
+    <form method="post">
+        <ul th:each="cheese: ${cheeses}">
+            <input type="checkbox" name="cheeseType" th:value="${cheese.key}"/>
+            <label th:text="${cheese.key}"></label>
+        </ul>
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>
